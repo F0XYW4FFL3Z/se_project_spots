@@ -1,21 +1,31 @@
 # Project 3: Spots
 
-### Overview  
+### Overview
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
+- Description
+- Tech Stack
+- Screenshots
+- Deployment
+
+**Description**
+
+This is Spots. A Software Engineering project based on media sharing websites. This was made for the Sprint 3's project on TripleTen. I spent roughly two days on the whole project and it allowed me to learn the ins and outs of adaptive web design and media queries in CSS.
+
+**Tech Stack**
+
+- HTML
+
+- CSS
+
+- Adaptive Web Design
+
 **Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+ ![Spots Desktop View](./images/preview/spots-app-1440px.png)
+![Spots Mobile View](./images/preview/spots-app-mobile-version.png)
+
+**Deployment**
+
+You can view the project on GitHub Pages using the link below:
+https://f0xyw4ffl3z.github.io/se_project_spots
+
+Enjoy the project!
