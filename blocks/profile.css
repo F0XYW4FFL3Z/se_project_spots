@@ -19,6 +19,7 @@
 .profile__name {
   max-width: 420px;
   margin: 0 0 12px;
+  color: #212121;
   font-weight: 500;
   font-size: 32px;
   line-height: 1;
@@ -32,6 +33,7 @@
 .profile__description {
   max-width: 420px;
   margin: 0;
+  color: #212121;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
@@ -67,6 +69,7 @@
   width: 157px;
   height: 52px;
   background-color: #212121;
+  border: none;
   border-radius: 8px;
   color: #fcf5e5;
   display: flex;

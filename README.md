@@ -28,4 +28,7 @@ This is Spots. A Software Engineering project based on media sharing websites. T
 You can view the project on GitHub Pages using the link below:
 https://f0xyw4ffl3z.github.io/se_project_spots
 
+Video overview:
+https://drive.google.com/file/d/14IWCtMaBBS2ngFR-nhtoVTvGivEcvXCx/view?usp=drive_link
+
 Enjoy the project!
