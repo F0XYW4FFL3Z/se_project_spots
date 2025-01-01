@@ -25,12 +25,38 @@ const initialCards = [
   },
 ];
 
+const profileName = document.querySelector(".profile__name");
+const profileDesc = document.querySelector(".profile__description");
 const profileEditButton = document.querySelector(".profile__edit-btn");
-
-const editModalCloseBtn = document.querySelector(".modal__close-btn");
 const editModal = document.querySelector("#edit-profile-modal");
+const editModalFormElement = editModal.querySelector(".modal__form");
+const editModalCloseBtn = editModal.querySelector(".modal__close-btn");
+const editModalNameInput = editModal.querySelector("#profile-name-input");
+const editModalDescInput = editModal.querySelector(
+  "#profile-description-input"
+);
+
+const cardTemplate = document.querySelector("#card-template");
+const cardsList = document.querySelector(".cards__list");
+
+function getCardElememt(data) {
+  const cardElement = cardTemplate.content
+    .querySelector(".card")
+    .cloneNode(true);
+
+  const cardNameEl = cardElement.querySelector(".card__title");
+  const cardImageEl = cardElement
+    .querySelector(".card__image")
+    .setAttribute("src", data.link);
+
+  cardNameEl.textContent = data.name;
+
+  return cardElement;
+}
 
 function openModal() {
+  editModalNameInput.value = profileName.textContent;
+  editModalDescInput.value = profileDesc.textContent;
   editModal.classList.add("modal__opened");
 }
 
@@ -38,6 +64,18 @@ function closeModal() {
   editModal.classList.remove("modal__opened");
 }
 
-profileEditButton.addEventListener("click", openModal);
+function handleEditFormSubmit(e) {
+  e.preventDefault();
+  profileName.textContent = editModalNameInput.value;
+  profileDesc.textContent = editModalDescInput.value;
+  closeModal();
+}
 
+profileEditButton.addEventListener("click", openModal);
 editModalCloseBtn.addEventListener("click", closeModal);
+editModalFormElement.addEventListener("submit", handleEditFormSubmit);
+
+for (let i = 0; i < initialCards.length; i++) {
+  const cardElement = getCardElememt(initialCards[i]);
+  cardsList.prepend(cardElement);
+}
