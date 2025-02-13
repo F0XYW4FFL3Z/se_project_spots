@@ -98,12 +98,12 @@ function getCardElememt(data) {
     previewModalCaption.textContent = data.name;
   });
 
-  previewModalCloseBtn.addEventListener("click", () => {
-    closeModal(previewModal);
-  });
-
   return cardElement;
 }
+
+previewModalCloseBtn.addEventListener("click", () => {
+  closeModal(previewModal);
+});
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
@@ -122,12 +122,17 @@ function handleEditFormSubmit(e) {
 
 function handleCardFormSubmit(e) {
   e.preventDefault();
+
   const inputValues = {
     name: addCardModalNameInput.value,
     link: addCardModalLinkInput.value,
   };
+
+  e.target.reset();
+
   const cardElement = getCardElememt(inputValues);
   cardsList.prepend(cardElement);
+
   closeModal(addCardModal);
 }
 
