@@ -132,8 +132,13 @@
   border-color: #212121;
 }
 
-.modal__input__type_error {
+.modal__input_type_error {
   border: 1px solid #ff000099;
+}
+
+.modal__input_type_error:focus {
+  border: 1px solid red;
+  outline: 0;
 }
 
 .modal__submit-btn {
@@ -147,7 +152,7 @@
   opacity: 1;
 }
 
-.modal__submit-btn:disabled {
+.modal__submit-btn_inactive {
   opacity: 0.5;
 }
 
